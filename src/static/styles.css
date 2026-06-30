@@ -30,6 +30,44 @@
   --error-light: #ffebee;
   --info: #0c5460;
   --info-light: #d1ecf1;
+  --header-control-bg: rgba(255, 255, 255, 0.2);
+  --header-control-bg-hover: rgba(255, 255, 255, 0.3);
+  --header-control-text: #ffffff;
+  --auth-notice-bg: #f5f5f5;
+  --auth-notice-text: #666666;
+  --auth-notice-border: #e0e0e0;
+}
+
+body.dark-mode {
+  --primary: #90caf9;
+  --primary-light: #bbdefb;
+  --primary-dark: #64b5f6;
+  --primary-text: #101522;
+  --secondary: #ffb74d;
+  --secondary-light: #ffd180;
+  --secondary-dark: #f57c00;
+  --secondary-text: #141414;
+  --background: #121212;
+  --surface: #1e1e1e;
+  --text-primary: #e7e7e7;
+  --text-secondary: #b8b8b8;
+  --border: #333333;
+  --border-light: #2a2a2a;
+  --border-focus: #505050;
+  --success: #81c784;
+  --success-light: #1f3323;
+  --warning: #ffb74d;
+  --warning-light: #352a1e;
+  --error: #ef9a9a;
+  --error-light: #3a2323;
+  --info: #90caf9;
+  --info-light: #1d2b38;
+  --header-control-bg: rgba(0, 0, 0, 0.22);
+  --header-control-bg-hover: rgba(0, 0, 0, 0.36);
+  --header-control-text: #f5f5f5;
+  --auth-notice-bg: #222222;
+  --auth-notice-text: #c2c2c2;
+  --auth-notice-border: #444444;
 }
 
 * {
@@ -617,6 +655,9 @@ footer {
   position: absolute;
   top: 10px;
   right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 #user-status {
@@ -639,7 +680,8 @@ footer {
   display: flex;
   align-items: center;
   gap: 5px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--header-control-bg);
+  color: var(--header-control-text);
   border-radius: 20px;
   padding: 4px 12px;
   font-size: 0.85rem;
@@ -647,7 +689,7 @@ footer {
 }
 
 .icon-button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--header-control-bg-hover);
 }
 
 .user-icon {
@@ -656,11 +698,18 @@ footer {
 
 #logout-button {
   padding: 3px 10px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--header-control-bg);
+  color: var(--header-control-text);
   font-size: 0.8rem;
   border-radius: 20px;
 }
 
 #logout-button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--header-control-bg-hover);
+}
+
+.auth-notice {
+  background-color: var(--auth-notice-bg);
+  color: var(--auth-notice-text);
+  border: 1px solid var(--auth-notice-border);
 }
